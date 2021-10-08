@@ -24,8 +24,7 @@ END
 USAGE:
 String[] inputs = {"visit", "use", "help", "look", "check inventory"}
 Print("What do you want to do?");
-READ command; //hhelzp
-command = checkInput(inputs, command); //help
+command = checkInput(inputs); //help
 
 
 INCLUDE IN ALL GENERAL SECTIONS (home, townSquare, libraryEntrance)   (libraryFrontSection, libraryBackSection, cave, friendsHouse
