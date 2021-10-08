@@ -1,0 +1,47 @@
+//parameters: String[] inputs, String  command
+BEGIN
+   
+  FOR i = 0 TO length of inputs
+  BEGIN
+    CREATE current;
+    current = command
+    IF(command == "
+    BEGIN
+    END
+  END
+  
+  
+  return command;
+  
+  
+  
+END
+
+USAGE:
+String[] inputs = {"visit", "use", "help", "look", "check inventory"}
+Print("What do you want to do?");
+READ command; //hhelzp
+command = checkInput(inputs, command); //help
+
+
+INCLUDE IN EVERY SECTION.
+IF(command == "visit")
+BEGIN
+   place = visit(place);
+END
+IF(command == "help")
+BEGIN
+   help();
+END
+
+
+
+IF(command == "use")
+BEGIN
+  Your code here, whatever options to use items in your area.
+END
+
+hhelzp
+   
+  
+  
