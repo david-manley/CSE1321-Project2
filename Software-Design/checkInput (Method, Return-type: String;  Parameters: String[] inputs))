@@ -1,17 +1,20 @@
 //parameters: String[] inputs, String  command
 BEGIN
-   
-  FOR i = 0 TO length of inputs
-  BEGIN
-    CREATE current;
-    current = command
-    IF(command == "
-    BEGIN
-    END
-  END
+  CREATE isCorrectInput = true;
+  CREATE
+  WHILE isCorrectInput
+    FOR i = 0 TO length of inputs
+      CREATE current;
+      current = inputs[i];
+      IF(command != "current") THEN
+         isCorrectInput =false;
+      END IF 
+    END FOR
+    
+  END  WHILE
   
   
-  return command;
+  RETURN command;
   
   
   
@@ -24,7 +27,7 @@ READ command; //hhelzp
 command = checkInput(inputs, command); //help
 
 
-INCLUDE IN EVERY SECTION.
+INCLUDE IN ALL GENERAL SECTIONS (home, townSquare, libraryEntrance)   (libraryFrontSection, libraryBackSection, cave, friendsHouse
 IF(command == "visit")
 BEGIN
    place = visit(place);
@@ -36,12 +39,9 @@ END
 
 
 
-IF(command == "use")
-BEGIN
-  Your code here, whatever options to use items in your area.
-END
 
-hhelzp
+
+
    
   
   
