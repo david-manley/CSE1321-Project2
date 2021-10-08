@@ -17,7 +17,7 @@ BEGIN
          isWrong =false;
       END IF 
     END FOR
-  WHILE isWrong
+  WHILE isWrong;
   RETURN command;
 END
 
