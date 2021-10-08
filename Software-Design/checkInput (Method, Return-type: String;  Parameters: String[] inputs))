@@ -1,23 +1,24 @@
-//parameters: String[] inputs, String  command
+//parameters: String[] inputs
 BEGIN
-  CREATE isCorrectInput = true;
-  CREATE
-  WHILE isCorrectInput
+  CREATE isWrong = true;
+  CREATE command ="";
+  DO
+    PRINTLN("Your choices are as follows:")
+    FOR I =0 to length of inputs
+      PRINT(inputs[i] + ", ");
+    END FOR
+    PRINTLN();
+    PRINT("Please enter an option: ");
+    READ command;
     FOR i = 0 TO length of inputs
       CREATE current;
       current = inputs[i];
-      IF(command != "current") THEN
-         isCorrectInput =false;
+      IF(command == "current") THEN
+         isWrong =false;
       END IF 
     END FOR
-    
-  END  WHILE
-  
-  
+  WHILE isWrong
   RETURN command;
-  
-  
-  
 END
 
 USAGE:
