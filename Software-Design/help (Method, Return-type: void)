@@ -1,7 +1,7 @@
 BEGIN
   PRINTLN("There are four main commands in this game: ");
   PRINTLN("Help - provides a list of game commands ");
-  PRINTLN("Visit - Allows you to travel within the adventure game. Type visit, and hit enter. You'll then be prompted with a list of locations to travel to");
+  PRINTLN("Visit - Allows you to travel between the three main areas in the adventure game. Type visit, and hit enter. You'll then be prompted with a list of locations to travel to");
   PRINTLN("Use - Allows you to use the items you've gathered thus far. If you use an item in the world, you will pick it up. If you interact with certain world objects, you will be asked which item you want to use");
   PRINTLN("Check Inventory - Allows you to see what items you've gathered");
   PRINTLN("Look - Allows you to look around your area for items that you can interact with");
