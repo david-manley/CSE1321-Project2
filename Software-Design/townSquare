@@ -80,7 +80,7 @@ BEGIN
 ELSE 
  PRINTLN "Narrator: What will you do now?:"
   
-    READ COMMAND command
+    command = checkInput(inputs);
 	
 IF(command= “visit’)
 BEGIN
