@@ -1,0 +1,88 @@
+IF (place == "cave") THEN
+  PRINTLN(NAME + " has decided to visit the cave behind their house. They've travelled through the cave passageway, and arrived in their current location");
+  PRINTLN("Narrator: " + NAME + " recalls that many, many people have gone missing in this cave while looking for treasure.");
+  IF ((hasItem("realMap")) OR (hasItem("fakeMap"))) THEN
+    PRINTLN("Luckily, " + NAME + " found a treasure map, and is able to traverse the cave safely (for the most part).");
+  END IF
+  PRINTLN("What will " + NAME + " do now I wonder? Hopefully give up this foolish adventure before they get lost in the cave like their predecessors.");
+  
+  command = checkInput(inputs);
+  
+  IF (command == "visit") THEN
+    place = visit(place);
+  END IF
+  
+  ELSE IF (command == "help") THEN
+    help();
+  END ELSE IF
+  
+  ELSE IF (command == "look") THEN
+    PRINTLN(NAME + " decides to look around. Besides the rather boring stalagtites, there are only two things of note: the passage that " + NAME + " came from, and a path going deeper into the cave.");
+  END ELSE IF
+  
+  ELSE IF (command == "check inventory") THEN
+    checkInventory();
+  END ELSE IF
+  
+  ELSE IF(command == "use") THEN
+    PRINTLN("Narrator: I wonder, which object would " + NAME + " like to use?: ");
+    CREATE interactWith;
+    CREATE String[] caveObjects;
+    caveObjects = {"cave exit", "cave path"}
+    interactWith = checkInput(caveObjects);
+    
+    IF(interactWith == "cave exit") THEN
+      PRINTLN("Narrator: " + NAME + " has decided to make the smart choice, and leaves through the cave exit to go back to their home."
+      place = "home";
+    END IF
+    
+    
+    
+    ELSE IF (interactWith == "cavePassage")THEN
+      PRINTLN("Narrator: Unfortunately, " + NAME + " has decided to continue with their foolish quest, and venturee deep into the mysterious cave.");
+      PRINTLN("By sheer luck, " + NAME + " happens to stumble upon the location of the treasure, but as they take a step toward it, they are able to hear the click of a pressure plate".);
+      PRINTLN("IT'S A TRAP!");
+      
+      IF (hasItem("realMap")) THEN
+        PRINTLN("Fortunately, " + NAME + " knew of this because of the old treasure map they found! They are 50 percent confident that they will be able to succeed in disarming the trap!");
+        PRINT(NAME + " must now pick a number, 1 or 2: ");
+        CREATE numberChoice;
+        READ numberChice.
+        CREATE correctNumber;
+        correctNumber = (Random number 1, or 2);
+        IF(numberChoice == correctNumber) THEN
+          PRINTLN("Thankfully, " + name + "has picked correctly, and successfully disarmed the trap, allowing them to get the treasure!");
+          addItemToInv("treasure");
+        END IF
+      END IF
+      
+      ELSE IF (hasItem("fakeMap")) THEN
+        PRINTLN("Unfortunately, " + NAME + " was unaware of this because the treasure map they found was a fake!");
+        PRINT(NAME + " must now pick a number from 1- 50: ");
+        CREATE numberChoice;
+        READ numberChice.
+        CREATE correctNumber;
+        correctNumber = (Random number 1-50);
+        IF(numberChoice == correctNumber) THEN
+          PRINTLN("Wow. Just....I don't even know what to say anymore. " + NAME+ " \'s luck is just too good, and they've somehow managed to disarm the trap completely by accident...");
+          addItemToInv("treasure");
+        END IF
+      END ELSE IF
+      
+      ELSE
+        PRINTLN("Unfortunately, " + NAME + " was unaware of this because they didn't even bother to look for a trap");
+        PRINT(NAME + " must now pick a number from 1- 50: ");
+        CREATE numberChoice;
+        READ numberChice.
+        CREATE correctNumber;
+        correctNumber = (Random number 1-50);
+        IF(numberChoice == correctNumber) THEN
+          PRINTLN("Wow. Just....I don't even know what to say anymore. " + NAME+ " \'s luck is just too good, and they've somehow managed to disarm the trap completely by accident...");
+          addItemToInv("treasure");
+        END IF
+      END ELSE
+       
+    END ELSE IF
+    
+    
+    
