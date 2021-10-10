@@ -1,0 +1,26 @@
+  //Adds the item to inventory
+  PUBLIC void addItemToInv(String name)
+
+BEGIN
+  FOR i = 0 TO length of inputs
+   BEGIN
+    IF(inv[i] == "")
+    BEGIN
+      inv[i] = name;
+      
+      Print("You have added:" + name + ",");
+      return;
+    END
+   END
+END
+    
+    //Prints the inventory
+  PUBLIC void printInv()
+   BEGIN
+    FOR(String x: inv)
+    BEGIN
+      PRINT(x);
+     END
+    END
+    
+    PUBLIC static String inv[] = {"","","","",""};
