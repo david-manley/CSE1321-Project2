@@ -9,8 +9,9 @@ Varible naming conventions
 "look" == give the printlines for where the player is 
 "check inventory" == to check the users invetory and output the results.
 "NAME" == the varrable for the charcter name 
-"libraryPass" == the item library pass
 "PLAY" == bool that ends the do while loop to play the game
+
+String[] inputs = {"visit", "look", "help", "check inventory", "use"}
 the place Variables ::
 
 
@@ -29,6 +30,9 @@ methods
 checkInput == all input method (visit, look etc.)
 help == printline method for all comands lists and such.
 Main == its the main method, like what else do you want to know. 
+addItemToInv == Adds an item to the inventory
+checkInv == Prints out all the items in your inventory
+hasItem == returns true or false, depending on whether the user has an item or not.
 
 For those creating the locations. 
 
