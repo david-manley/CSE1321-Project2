@@ -1,3 +1,4 @@
+  PUBLIC static String inv[] = {"","","","",""};
   //Adds the item to inventory
   PUBLIC void addItemToInv(String name)
 
@@ -22,5 +23,4 @@ END
       PRINT(x);
      END
     END
-    
-    PUBLIC static String inv[] = {"","","","",""};
+   
