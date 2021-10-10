@@ -16,7 +16,7 @@ BEGIN
 END
     
     //Prints the inventory
-  PUBLIC void printInv()
+  PUBLIC void checkInv()
    BEGIN
     FOR(String x: inv)
     BEGIN
