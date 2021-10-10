@@ -1,0 +1,25 @@
+MAIN
+	PRINTLINE "Welcome to "THE COLLEGE EXPERIENCE" created by the Hon CSE 1321 in the fall of 2021"
+		PRINT LINE "This game works by special comands. 
+		METHOD help
+		CREATE bool PLAY
+	BEGIN DO WHILE 
+		PRINT LINE "We begin our story by taking a look at a specific college student, down on his luck, doing some brain storming on what to do about the money problem of college life"
+		PRINT LINE " what would this college students name be?"
+			READ NAME
+		PRINTLINE "Inspriation strikes!! as the college student named NAME decided what to do! What did the college student do?
+			READ command
+			METHOD== checkInput (command)
+// REST OF CODE HERE 
+		
+		
+		CREATE char gamePlay
+		PRINT LINE "do you want to control the life of a college student again user? enter Y for yes or N for no."
+		READ gamePlay
+		IF gamePlay equals Y
+			PLAY = true
+		else if gamePlay equals N
+			Play = false
+	END DO WHILE (PLAY ==false) 
+	PRINTLINE "GAME OVER"
+END MAIN
