@@ -20,7 +20,7 @@ END
    BEGIN
     FOR(String x: inv)
     BEGIN
-      PRINT(x);
+      PRINT(x + ", ");
      END
     END
    
