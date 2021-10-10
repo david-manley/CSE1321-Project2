@@ -1,0 +1,95 @@
+Town Square Pseudocode
+//code should run regardless of capitalization
+
+IF(visit= ("town")) 
+BEGIN
+  
+  String action1, action2;
+
+PRINTLN "Narrator: You walk into the town square and see a farmer's stand and a flower stall."
+PRINTLN “Narrator: So, what are you doing now?:”
+
+READ command
+
+IF (command== (“visit”))
+BEGIN
+
+place=	visit(place)
+END
+IF (command== (“help”))
+BEGIN
+help();
+END
+IF(command==(“look”)
+CREATE String response
+PRINTLN “Narrator: I already told you, there’s a flower stall and a farmer’s stand here! Do you want to go visit one of them?:”
+READ
+IF(response==(“Y”)|| response==(“Yes”))
+BEGIN
+
+PRINTLN "Narrator: Which one would you like to go to?:"
+READ COMMAND action1
+
+IF (action1== ("farmer's stand")) 
+BEGIN
+    
+    PRINTLN "Narrator: You see the fruits and veggies the stand has but you're too broke to afford any of it"
+   PRINTLN
+    PRINTLN "Narrator: Would you like to go to the flower stall?:"
+    
+    READ COMMAND action2;
+    
+   
+     IF(action2==("Y") OR action2== ("Yes"))
+        BEGIN
+        PRINTLN "Narrator: You look at all the different flowers at the stand.”+ NAME +”should probably buy their mom some flowers if they ever find the treasure."
+    END
+  ELSE
+      PRINTLN "Narrator: Well what now? : "
+  
+   READ command;
+
+IF (command= (“visit”))
+BEGIN
+place=	visit(place);
+END
+IF (command= “(help”))
+BEGIN
+help();
+
+END
+
+
+    IF(action1== ("flower stall"))
+BEGIN
+
+     PRINTLN "Narrator: You look at all the different flowers at the stand. NAME should probably their mom some flower's if they ever find the treasure."
+
+     PRINTLN "Narrator: Would you like to go to the farmer's stand?:"
+
+READ COMMAND action2;
+
+        IF(action2== ("Y") OR action2 ==("Yes"))
+BEGIN
+        
+        PRINTLN "Narrator: You see the fruits and veggies the stand has but you're too broke to afford any of it"
+        
+        
+    END
+ELSE 
+ PRINTLN "Narrator: What will you do now?:"
+  
+    READ COMMAND command
+	
+IF(command= “visit’)
+BEGIN
+place=	visit(place);
+END
+IF(command= “help”)
+BEGIN
+help();
+
+END
+END
+END
+twon
