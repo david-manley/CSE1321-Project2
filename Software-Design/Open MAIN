@@ -38,6 +38,6 @@ MAIN
 			play = true
 		ELSE IF gamePlay equals N
 			play = false
-	END DO WHILE (PLAY ==false) 
+	END DO WHILE (play ==false) 
 	PRINTLINE "GAME OVER"
 END MAIN
