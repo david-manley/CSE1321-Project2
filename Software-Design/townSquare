@@ -29,7 +29,7 @@ BEGIN
 
 PRINTLN "Narrator: Which one would you like to go to?:"
 CREATE String[] standOptions = {"farmer's stand", "flower stall"};
-action1 = checkInput
+action1 = checkInput(standOptions);
 
 IF (action1== ("farmer's stand")) 
 BEGIN
