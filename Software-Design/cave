@@ -83,6 +83,6 @@ IF (place == "cave") THEN
       END ELSE
        
     END ELSE IF
-    
-    
+  END ELSE IF (cave passage)
+END IF
     
