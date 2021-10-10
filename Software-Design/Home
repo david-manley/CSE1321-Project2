@@ -1,0 +1,24 @@
+IF(“Home”)BEGIN
+  PRINTLN(NAME + ” is at their home...It’s a dump.”)
+  PRINTLN(“What does” + NAME + “wanna do?!”)
+  READ command;
+  command = checkInput(inputs, command);
+IF(command == “visit”)
+	Place = visit(place);
+ENDIF
+
+IF(command == “help”)
+  help();
+ENDIF
+
+IF(command == “check inventory”)
+
+
+IF(command == “look”)
+	PRINTLN(NAME + “see’s a book, a record player, a dirty plastic bowl,  a cracked tv, several dead plants, and a desk. There is a Library card on the desk”)
+	
+ENDIF
+IF(command == “use”)
+	String[] house
+
+END
