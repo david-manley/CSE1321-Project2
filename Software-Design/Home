@@ -23,8 +23,14 @@ END ELSE IF
 IF(command == "use") THEN
    PRINTLN("What are you gonna use" + NAME +"?");
    CREATE String[] houseObjects;
+   IF(!(hasItem("libraryPass"))) THEN
    houseObjects = {"Book" , "record player", "plastic bowl" , "tv" , "dead plant" , "Library card"}
    command = checkInput(houseObjects);
+   END IF
+   ELSE IF(hasItem("libraryPass")) THEN
+   houseObjects = {"Book" , "record player", "plastic bowl" , "tv" , "dead plant"}
+   command = checkInput(houseObjects);
+   END ELSE IF
    
    IF(interactWith == "Book") THEN
       PRINTLN( NAME +"picks up the book and opens it....chapters 4-8 fall out of the book :/ ");
@@ -52,8 +58,11 @@ IF(command == "use") THEN
    END ELSE IF
    
    IF(interactWith == "libraryCard") THEN
-      IF(hasItem("Library card") THEN 
-         PRINTLN( NAME + "has the library card");
+      IF(!(hasItem("Library card"))) THEN 
+         PRINTLN( NAME + "has picked up the library card");
+	 addItemToInv("libraryPass");
+      END IF
+   END IF
    
     
     
