@@ -1,5 +1,5 @@
 
-IF (visit= ("friend's house")) THEN   
+IF (use=("friend's door")) THEN   
     String action1, action2;
     
     PRINTLN "Narrator: You walk into your friend's house and look around."
