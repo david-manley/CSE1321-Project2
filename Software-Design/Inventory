@@ -10,6 +10,7 @@ BEGIN
       inv[i] = name;
       
       Print(name + " has been added to " + NAME + " \'s inventory");
+      RETURN;
     END IF
    END FOR
 END adItemToInv
@@ -30,7 +31,7 @@ END adItemToInv
     BEGIN
       IF(itemName == inv[i])
       BEGIN
-        return true;
+        RETURN true;
       END IF
     END FOR
     return false;
