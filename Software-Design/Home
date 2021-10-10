@@ -4,7 +4,7 @@ IF("Home")BEGIN
   READ command;
   command = checkInput(inputs, command);
 IF(command == "visit") THEN
-    Place = visit(place);
+    place = visit(place);
 END IF
 
 IF(command == "help”) THEN 
@@ -24,13 +24,17 @@ IF(command == "use") THEN
    PRINTLN("What are you gonna use" + NAME +"?");
    CREATE String[] houseObjects;
    IF(!(hasItem("libraryPass"))) THEN
-   houseObjects = {"Book" , "record player", "plastic bowl" , "tv" , "dead plant" , "Library card"}
+   houseObjects = {"Book" , "record player", "plastic bowl" , "tv" , "dead plant" , "Library card", "cave passage" }
    command = checkInput(houseObjects);
    END IF
    ELSE IF(hasItem("libraryPass")) THEN
-   houseObjects = {"Book" , "record player", "plastic bowl" , "tv" , "dead plant"}
+   houseObjects = {"Book" , "record player", "plastic bowl" , "tv" , "dead plant" , "cave passage"}
    command = checkInput(houseObjects);
    END ELSE IF
+   
+   IF(interactWith == "cave passage") THEN
+      place = "cave";
+    END IF
    
    IF(interactWith == "Book") THEN
       PRINTLN( NAME +"picks up the book and opens it....chapters 4-8 fall out of the book :/ ");
