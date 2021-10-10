@@ -22,7 +22,10 @@ help();
 END
 IF(command==(“look”)
 CREATE String response
-PRINTLN “Narrator: I already told you, there’s a flower stall and a farmer’s stand here! Do you want to go visit one of them?:”
+
+PRINTLN	"Narrator: Oh yeah, you can see your friend's house from here."
+
+PRINTLN “Narrator:But I already said, there’s a flower stall and a farmer’s stand here! Do you want to go visit one of them?:”
 READ
 IF(response==(“Y”)|| response==(“Yes”))
 BEGIN
@@ -54,9 +57,13 @@ IF (command= (“visit”))
 BEGIN
 place=	visit(place);
 END
-IF (command= “(help”))
+IF (command= ("help”))
 BEGIN
 help();
+
+IF (command==("use"))
+
+PRINTLN(
 
 END
 
