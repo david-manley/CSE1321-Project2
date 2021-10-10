@@ -2,7 +2,7 @@
   PUBLIC void addItemToInv(String name)
 
 BEGIN
-  FOR i = 0 TO length of inputs
+  FOR i = 0 TO length of inv
    BEGIN
     IF(inv[i] == "")
     BEGIN
