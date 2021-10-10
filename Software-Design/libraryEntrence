@@ -1,4 +1,4 @@
-IF(("libraryEntrance")) BEGIN
+IF(place== "libraryEntrance") BEGIN
 			PRINTLN(NAME + " is at the library entrence right now");
 			PRINTLN(NAME + " was thinking of checking out the Library to see if any useful information will be there and if the library have any new comics!");
 			PRINTLN("Narrator: " + NAME + " needs a Library Pass to enter the back section, "+ NAME +" remembers what happened last time someone forgot it and they lost their pants!!");
