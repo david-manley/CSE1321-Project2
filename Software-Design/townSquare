@@ -25,7 +25,7 @@ CREATE String response
 
 PRINTLN	"Narrator: Oh yeah, you can see your friend's house from here."
 
-PRINTLN “Narrator:But I already said, there’s a flower stall and a farmer’s stand here! Do you want to go visit one of them?:”
+PRINTLN “Narrator: But I already said, there’s a flower stall and a farmer’s stand here! Do you want to go visit one of them?:”
 READ
 IF(response==(“Y”)|| response==(“Yes”))
 BEGIN
