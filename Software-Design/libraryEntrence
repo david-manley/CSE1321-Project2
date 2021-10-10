@@ -1,8 +1,8 @@
 IF(place== "libraryEntrance") BEGIN
-			PRINTLN(NAME + " is at the library entrence right now");
-			PRINTLN(NAME + " was thinking of checking out the Library to see if any useful information will be there and if the library have any new comics!");
-			PRINTLN("Narrator: " + NAME + " needs a Library Pass to enter the back section, "+ NAME +" remembers what happened last time someone forgot it and they lost their pants!!");
-			PRINTLN("What will "+NAME + " do next? Right now it seems like they\'re just going to stand there like a statue, apparently");
+			PRINTLN NAME + " is at the library entrance right now"
+			PRINTLN NAME + " was thinking of checking out the Library to see if any useful information will be there and if the library have any new comics!"
+			PRINTLN "Narrator: " + NAME + " needs a Library Pass to enter the back section." + NAME +" remembers what happened last time someone forgot it and they lost their pants!!"
+			PRINTLN "What will "+NAME + " do next? Right now it seems like they\'re just going to stand there like a statue, apparently"
 			CREATE String[] inputs = {"visit", "use", "look", "check inventory", "help"}
 			command = checkInput(inputs);
 			
@@ -11,29 +11,34 @@ IF(place== "libraryEntrance") BEGIN
 			END IF
 					   
 			ELSE IF (command=="look") BEGIN
-				PRINTLN("Narrartor: The college student is currently in front of the entrance. Did you not hear what I said earlier?");
-				PRINTLN("There are two doors: one for the front section and one for the back section."); 
+				PRINTLN "Narrartor: The college student is currently in front of the entrance. Did you not hear what I said earlier?"
+				PRINTLN "There are two doors: one for the front section and one for the back section."
 			END IF
 			ELSE IF (command=="help") BEGIN
 				help();
 			END IF
 			ELSE IF (command=="use")BEGIN
-				PRINT("User you can direct + NAME+ through either door in case you were wondering.");
-				PRINTLN("What do you want to use?: ");
+				PRINT "User you can direct" + NAME+ "through either door in case you were wondering."
+				
+				PRINTLN("What do you want to use?: "
+				
 				String[] libraryEntranceInputs = {"Front Section Door", "Back Section Door"}
+				
 				command = checkInput(libraryEntranceInputs);
+				
 				IF(command == "Back Section Door")BEGIN
+				
 					IF(hasItem("libraryPass")) BEGIN
-						PRINTLN("Narrartor: NAME uses the Library Pass to get in, smells like knowlege and old paper. The Librarian give's you a look and says 'Oh ...you.'");
-						PRINTLN("You feel very welcome.");
+						PRINTLN "Narrartor:"+ NAME +"uses the Library Pass to get in, smells like knowlege and old paper. The Librarian give's you a look and says 'Oh ...you.'"
+						PRINTLN "You feel very welcome."
 						place = libraryBackSection
 					END IF
 					ELSE IF(!(hasItem("libraryPass"))THEN
-						PRINTLN(NAME + " has decided not to bring their library pass from home, and without the pass the librarians will not let them in");
+						PRINTLN (NAME + " has decided not to bring their library pass from home, and without the pass the librarians will not let them in"
 					END IF
 				END IF
 				ELSE IF (command == "Front Entrance Door") THEN
-					PRINTLN"Thankfully, the front section of the library does not require a library pass to access. Thus, " + NAME + " has been granted access.");
+					PRINTLN "Thankfully, the front section of the library does not require a library pass to access. Thus, " + NAME + " has been granted access."
 					place = "libraryFrontSection";
 				END ELSE IF
 			END IF
