@@ -38,7 +38,7 @@ IF (place == "cave") THEN
     
     
     
-    ELSE IF (interactWith == "cavePassage")THEN
+    ELSE IF (interactWith == "cave path")THEN
       PRINTLN("Narrator: Unfortunately, " + NAME + " has decided to continue with their foolish quest, and venturee deep into the mysterious cave.");
       PRINTLN("By sheer luck, " + NAME + " happens to stumble upon the location of the treasure, but as they take a step toward it, they are able to hear the click of a pressure plate".);
       PRINTLN("IT'S A TRAP!");
