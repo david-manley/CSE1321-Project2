@@ -1,15 +1,15 @@
 Town Square Pseudocode
 //code should run regardless of capitalization
 
-IF(visit= ("town")) 
+IF(place== ("townSquare")) 
 BEGIN
   
-  String action1, action2;
+  CREATE String action1, action2;
 
 PRINTLN "Narrator: You walk into the town square and see a farmer's stand and a flower stall."
 PRINTLN “Narrator: So, what are you doing now?:”
 
-READ command
+command = checkInput(inputs);
 
 IF (command== (“visit”))
 BEGIN
