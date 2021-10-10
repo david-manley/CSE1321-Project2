@@ -10,6 +10,7 @@ Varible naming conventions
 "check inventory" == to check the users invetory and output the results.
 "NAME" == the varrable for the charcter name 
 "libraryPass" == the item library pass
+"PLAY" == bool that ends the do while loop to play the game
 the place Variables ::
 
 
