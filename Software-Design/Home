@@ -1,24 +1,62 @@
-IF(“Home”)BEGIN
-  PRINTLN(NAME + ” is at their home...It’s a dump.”)
-  PRINTLN(“What does” + NAME + “wanna do?!”)
+IF("Home")BEGIN
+  PRINTLN(NAME + " is at their home...It’s a dump.");
+  PRINTLN("What does" + NAME + "wanna do?!");
   READ command;
   command = checkInput(inputs, command);
-IF(command == “visit”)
-	Place = visit(place);
-ENDIF
+IF(command == "visit") THEN
+    Place = visit(place);
+END IF
 
-IF(command == “help”)
-  help();
-ENDIF
+IF(command == "help”) THEN 
+    help();
+END  IF
 
-IF(command == “check inventory”)
+IF(command == "check inventory")THEN
+    checkInventory();
+  END IF
 
 
-IF(command == “look”)
-	PRINTLN(NAME + “see’s a book, a record player, a dirty plastic bowl,  a cracked tv, several dead plants, and a desk. There is a Library card on the desk”)
+IF(command == "look") THEN
+    PRINTLN(NAME + "see’s a book, a record player, a dirty plastic bowl,  a cracked tv, several dead plants, and a desk. There is a Library card on the desk");
 	
-ENDIF
-IF(command == “use”)
-	String[] house
+END ELSE IF
+IF(command == "use") THEN
+   PRINTLN("What are you gonna use" + NAME +"?");
+   CREATE String[] houseObjects;
+   houseObjects = {"Book" , "record player", "plastic bowl" , "tv" , "dead plant" , "Library card"}
+   command = checkInput(houseObjects);
+   
+   IF(interactWith == "Book") THEN
+      PRINTLN( NAME +"picks up the book and opens it....chapters 4-8 fall out of the book :/ ");
+      
+   END ELSE IF
+   
+   ELSE IF(interactWith == "record player") THEN
+      PRINTLN( NAME + "presses play on the record player and is rick rolled");
+    
+   END ELSE IF
+   
+   ELSE IF(interactWith == "plastic bowl") THEN
+      PRINTLN( NAME + "picks up the plastic bowl and then sets it back down.");
+      
+   END ELSE IF 
+   
+   IF(interactWith == "tv") THEN
+      PRINTLN( NAME + "turns on the tv and spongebob appears on the screen!");
+      
+   END ELSE IF
+   
+   IF(interactWith == "dead plant") THEN
+      PRINTLN( NAME + "smells the dead plant....why " + NAME + " is doing this I have no clue ¯\_(ツ)_/¯");
+      
+   END ELSE IF
+   
+   IF(interactWith == "Library card") THEN
+      IF(hasItem("Library card") THEN 
+         PRINTLN( NAME + "has the library card");
+   
+    
+    
+    
 
 END
