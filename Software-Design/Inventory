@@ -7,9 +7,9 @@ BEGIN
    BEGIN
     IF(inv[i] == "")
     BEGIN
-      inv[i] = name;
+      inv[i] = item;
       
-      Print(name + " has been added to " + NAME + " \'s inventory");
+      Print(item + " has been added to " + NAME + " \'s inventory");
       RETURN;
     END IF
    END FOR
