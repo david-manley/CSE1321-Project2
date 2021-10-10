@@ -10,17 +10,16 @@ BEGIN
       inv[i] = name;
       
       Print("You have added:" + name + ",");
-      return;
-    END
-   END
-END
+    END IF
+   END FOR
+END adItemToInv
     
     //Prints the inventory
   PUBLIC void checkInv()
-   BEGIN
+   BEGIN 
     FOR(String x: inv)
-    BEGIN
+    BEGIN 
       PRINT(x + ", ");
-     END
-    END
+     END FOR
+    END checkInv
    
