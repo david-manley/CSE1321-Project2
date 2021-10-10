@@ -1,7 +1,7 @@
 Town Square Pseudocode
 //code should run regardless of capitalization
 
-IF(place== ("townSquare")) 
+IF(place== "townSquare") 
 BEGIN
   
   CREATE String action1, action2;
