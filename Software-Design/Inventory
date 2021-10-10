@@ -9,7 +9,7 @@ BEGIN
     BEGIN
       inv[i] = name;
       
-      Print( name + " has been added to your inventory");
+      Print(name + " has been added to " + NAME + " \'s inventory");
     END IF
    END FOR
 END adItemToInv
