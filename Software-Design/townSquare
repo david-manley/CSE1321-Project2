@@ -28,7 +28,8 @@ IF(response==(“Y”)|| response==(“Yes”))
 BEGIN
 
 PRINTLN "Narrator: Which one would you like to go to?:"
-READ COMMAND action1
+CREATE String[] standOptions = {"farmer's stand", "flower stall"};
+action1 = checkInput
 
 IF (action1== ("farmer's stand")) 
 BEGIN
