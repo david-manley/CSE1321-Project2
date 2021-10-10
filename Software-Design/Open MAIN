@@ -1,5 +1,12 @@
+CREATE private String NAME="";
+CREATE private String PLACE = "home"
+
 MAIN
 	PRINTLINE "Welcome to "THE COLLEGE EXPERIENCE" created by the Hon CSE 1321 in the fall of 2021"
+	CREATE String[] inputs = {"use", "look", "visit", "check inventory", "help"};
+	CREATE String command = "";
+	CREATE boolean play = true;
+	
 		PRINT LINE "This game works by special comands. 
 		BEGIN
 			help();
@@ -11,8 +18,7 @@ MAIN
 		PRINT LINE " what would this college students name be?"
 			READ NAME
 		PRINTLINE "Inspriation strikes!! as the college student named NAME decided what to do! What did the college student do?
-			READ command
-			METHOD== checkInput (command)
+			command = checkInput(inputs);
 		IF(command == "visit")
 		BEGIN
    			place = visit(place);
@@ -24,13 +30,14 @@ MAIN
 // REST OF CODE HERE 
 		
 		
-		CREATE char gamePlay
+		CREATE String gamePlay
+		CREATE String[] options = {"Y", "N"}
 		PRINT LINE "do you want to control the life of a college student again user? enter Y for yes or N for no."
-		READ gamePlay
+		gamePlay = checkInput(options);
 		IF gamePlay equals Y
-			PLAY = true
+			play = true
 		ELSE IF gamePlay equals N
-			Play = false
+			play = false
 	END DO WHILE (PLAY ==false) 
 	PRINTLINE "GAME OVER"
 END MAIN
