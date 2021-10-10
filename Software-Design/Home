@@ -51,7 +51,7 @@ IF(command == "use") THEN
       
    END ELSE IF
    
-   IF(interactWith == "Library card") THEN
+   IF(interactWith == "libraryCard") THEN
       IF(hasItem("Library card") THEN 
          PRINTLN( NAME + "has the library card");
    
