@@ -37,8 +37,8 @@ BEGIN
     PRINTLN "Narrator: You see the fruits and veggies the stand has but you're too broke to afford any of it"
    PRINTLN
     PRINTLN "Narrator: Would you like to go to the flower stall?:"
-    
-    READ COMMAND action2;
+    CREATE String[] yesOrNo = {"Y", "N", "Yes", "No"};
+    action2=checkInput(yesOrNo);
     
    
      IF(action2==("Y") OR action2== ("Yes"))
