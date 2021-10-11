@@ -21,7 +21,7 @@ IF (place == "cave") THEN
   END ELSE IF
   
   ELSE IF (command == "check inventory") THEN
-    checkInventory();
+    checkInv();
   END ELSE IF
   
   ELSE IF(command == "use") THEN
