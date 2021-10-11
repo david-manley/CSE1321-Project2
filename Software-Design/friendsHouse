@@ -21,7 +21,7 @@ IF(command=="look")
     friendsHouseObjects ={"dresser", "plant", "door"}
     CREATE String ineractWith
     PRINTLN (What are you going to use: ?");
-    READ interactWith
+   interactWith=checkInput(friendsHouseObjects);
     
     IF(interactWith== "dresser")
     PRINTLN ("Wow, you're nosy. You walk over to his dresser and try to open a drawer.");
@@ -31,6 +31,9 @@ IF(command=="look")
     IF(interactWith== "plant")
     PRINTLN ("At first you were impressed your friend could keep a plant alive longer than you did, but when you pick it you realize it's fake.");
     END IF
+    
+    IF(interactWith== "door")
+    place= townSquare
     END IF
   
   IF (command == "check inventory") THEN
