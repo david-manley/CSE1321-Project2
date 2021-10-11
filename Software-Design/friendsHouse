@@ -1,54 +1,38 @@
 
 IF (use=("friend's door")) THEN   
-    String action1, action2;
     
-    PRINTLN "Narrator: You walk into your friend's house and look around."
-    
-    PRINTLN "Narrator: You see a dresser in the corner Do you want to go to over to it?: "
-    
-    READ COMMAND action1;
-
-    
-      IF(action1== ("Y")|| action1== ("Yes"))
-THEN
-    
-    PRINTLN "Narrator: Wow, you're nosy. You walk over to his dresser and try to open a drawer."
-    
-    PRINTLN "Narrator: The drawer won't open because the game developers are poor college kids who don't have enough time to code something inside."
-    
-    END IF
-    
-END IF
-
-    ELSE
-    THEN
-    PRINTLN "Narrator: Why did you go into your friend's house if you weren't going to look around?"
-    
-    PRITNLN "Narrator: Do you want to look in the drawer now?:" 
-    
-    READ COMMAND action2
-    
-   
-    IF(action2== ("Y") OR action2== ("Yes"))
-THEN
-    
-      PRINTLN "Narrator: You're nosy. You walk over to his dresser and try to open a drawer."
-    
-    PRINTLN "Narrator: The drawer won't open because the game developers are poor college kids who don't have enough time to code something inside."
-END IF
-
-ELSE
-
- PRINTLN  “Narrator: You’re no fun. Fine, whatever. Just decide what you want to do now."
-
-READ COMMAND command
-
-IF (command= (“visit”))
+    PRINTLN ("You walk into your friend's house and look around.");
+    PRINTLN ("What are you even doing in here?: ");
+ 
+IF (command==“visit”)
 BEGIN
 place=	visit(place);
 END
-IF (command= “(help”))
+IF (command==“help”)
 BEGIN
 help();
-
-END
+IF(command=="look")
+    PRINTLN ("You see a dresser in the corner because you have eyes. You probably could snoop around in it since you have hands too.");
+    PRINTLN ("You also spot a plant like the one at your house, only this one is actually alive.");
+    END
+ IF(command=="use")
+    CREATE String[] friendsHouseObjects;
+    friendsHouseObjects ={"dresser", "plant"}
+    CREATE String ineractWith
+    PRINTLN (What are you going to use: ?");
+    READ interactWith
+    
+    IF(interactWith== "dresser")
+    PRINTLN ("Wow, you're nosy. You walk over to his dresser and try to open a drawer.");
+    PRINTLN ("The drawer won't open because the game developers are poor college kids who don't have enough time to code something inside.");
+    END IF
+ 
+    IF(interactWith== "plant")
+    PRINTLN ("At first you were impressed your friend could keep a plant alive longer than you did, but when you pick it you realize it's fake.");
+    END IF
+    END IF
+  
+  IF (command == "check inventory") THEN
+    checkInv();
+    END IF
+    
