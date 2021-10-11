@@ -1,7 +1,7 @@
 
 IF (use=("friend's door")) THEN   
     
-    PRINTLN ("You walk into your friend's house and look around.");
+    PRINTLN ("You walk into your friend's house.");
     PRINTLN ("What are you even doing in here?: ");
  
 IF (command==“visit”)
