@@ -35,22 +35,21 @@ CREATE String action1
       BEGIN
     
         PRINTLN "Narrator: You see the fruits and veggies the stand has but you're too broke to afford any of it."
-        PRINTLN
-    
-    
-          END
-
-
-
-    IF ELSE (action1== ("flower stall")) BEGIN
+  
+          END IF
+          
+   IF ELSE (action1== ("flower stall")) BEGIN
 
      PRINTLN "Narrator: You look at all the different flowers at the stand." +NAME +"should probably get their mom some flowers if they ever find the treasure."
-        
-    END
+    END IF
+    
     
     IF ELSE (action1==("friend's house")) BEGIN
     place=visit(place);
+    END IF
+   
+    END IF
     
 IF (command == "check inventory") THEN
     checkInv();
-    END
+    END IF
