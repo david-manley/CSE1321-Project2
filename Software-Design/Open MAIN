@@ -13,7 +13,7 @@ MAIN
 		END
 		CREATE bool PLAY
 		PRINTLINE "Game comencing in three, two, one..."
-	BEGIN DO WHILE 
+	BEGIN DO WHILE (play == true)
 		PRINT LINE "We begin our story by taking a look at a specific college student, down on his luck, doing some brain storming on what to do about the money problem of college life"
 		PRINT LINE " what would this college students name be?"
 			READ NAME
