@@ -2,22 +2,22 @@ CREATE private String NAME="";
 CREATE private String PLACE = "home"
 
 MAIN
-	PRINTLINE "Welcome to "THE COLLEGE EXPERIENCE" created by the Hon CSE 1321 in the fall of 2021"
+	PRINTLINE ("Welcome to "THE COLLEGE EXPERIENCE" created by the Hon CSE 1321 in the fall of 2021.");
 	CREATE String[] inputs = {"use", "look", "visit", "check inventory", "help"};
 	CREATE String command = "";
 	CREATE boolean play = true;
 	
-		PRINT LINE "This game works by special comands. 
+		PRINT LINE ("This game works by special comands.");
 		BEGIN
 			help();
 		END
 		CREATE bool PLAY
-		PRINTLINE "Game comencing in three, two, one..."
+		PRINTLINE ("Game comencing in three, two, one...");
 	BEGIN DO WHILE (play == true)
-		PRINT LINE "We begin our story by taking a look at a specific college student, down on his luck, doing some brain storming on what to do about the money problem of college life"
-		PRINT LINE " what would this college students name be?"
+		PRINT LINE ("We begin our story by taking a look at a specific college student, down on his luck, doing some brain storming on what to do about the money problem of college life");
+		PRINT LINE ("What would this college students name be?:" );
 			READ NAME
-		PRINTLINE "Inspriation strikes!! as the college student named NAME decided what to do! What did the college student do?
+		PRINTLINE ("Inspriation strikes!! as the college student named" +NAME +" decided what to do! What did the college student do?: ");
 			command = checkInput(inputs);
 		IF(command == "visit")
 		BEGIN
@@ -32,7 +32,7 @@ MAIN
 		
 		CREATE String gamePlay
 		CREATE String[] options = {"Y", "N"}
-		PRINT LINE "do you want to control the life of a college student again user? enter Y for yes or N for no."
+		PRINT LINE ("Do you want to control the life of a college student again user? Enter Y for yes or N for no.");
 		gamePlay = checkInput(options);
 		IF gamePlay equals Y
 			play = true
