@@ -19,37 +19,31 @@ BEGIN
     help();
   END
   IF(command==(“look”))
-
     PRINTLN "Narrator: Oh yeah, you can see your friend's house from here."
-
     PRINTLN “Narrator: But I already said, there’s a flower stall and a farmer’s stand here!”
-    
-    IF(command==(use)
-    BEGIN
-CREATE String action1
-      PRINTLN "Narrator: Which one would you like to go to?:"
-      CREATE String[] squareOptions = {"farmer's stand", "flower stall, friend's door"};
-      action1 = checkInput(squareOptions);
-    
+  END IF
+  
+  IF(command==(use)
+  BEGIN
+    CREATE String action1
+    PRINTLN "Narrator: Which one would you like to go to?:"
+    CREATE String[] squareOptions = {"farmer's stand", "flower stall", "friend's door"};
+    action1 = checkInput(squareOptions);
     IF (action1== ("farmer's stand")) 
       BEGIN
-    
         PRINTLN "Narrator: You see the fruits and veggies the stand has but you're too broke to afford any of it."
-  
-          END IF
-          
-   IF ELSE (action1== ("flower stall")) BEGIN
-
-     PRINTLN "Narrator: You look at all the different flowers at the stand." +NAME +"should probably get their mom some flowers if they ever find the treasure."
+      END IF
+      
+    IF ELSE (action1== ("flower stall")) BEGIN
+      PRINTLN "Narrator: You look at all the different flowers at the stand." +NAME +"should probably get their mom some flowers if they ever find the treasure."
     END IF
-    
     
     IF ELSE (action1==("friend's house")) BEGIN
-    place=visit(place);
+      place="friendsHouse";
     END IF
-   
-    END IF
+  END IF
     
-IF (command == "check inventory") THEN
+  IF (command == "check inventory") THEN
     checkInv();
-    END IF
+  END IF
+END IF
