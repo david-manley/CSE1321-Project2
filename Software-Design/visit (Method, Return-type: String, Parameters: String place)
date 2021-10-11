@@ -4,19 +4,19 @@ BEGIN
   CREATE String[] visitInput = {"home", "libraryEntrance", "townSquare"};
   command = checkInput(visitInput);
   IF(place =="libraryFrontSection" || place=="libraryBackSection" || place=="friendsHouse")
-    PRINT(NAME + "decides that apparently they are superHuman, and attempts to walk through the wall, 
+    PRINT(NAME + "decides that apparently they are super human, and attempts to walk through the wall, 
       only to realize that they have not spontaneously become able to do such a thing. They should really try to use the DOOR 
       that they used to get in here in the first place.")
     return place;
   END IF
   ELSE IF (place == "cave")
-    PRINT(NAME + " decides that apparently they are superHuman, and attempts to walk through the wall, 
+    PRINT(NAME + " decides that apparently they are super human, and attempts to walk through the wall, 
       only to realize that they have not spontaneously become able to do such a thing. They should really try to use the PASSAGE 
       that they used to get in here in the first place.")
     return place;
   END ELSE IF
   ELSE IF (command == "home")
-    PRINTLN(NAME + " has decided to take a trip back to their home, Probably to give up their useless incredibly stupid adventure.");
+    PRINTLN(NAME + " has decided to take a trip back to their home, Probably to give up their useless and incredibly stupid adventure.");
     return "home";
   END ELSE IF
   ELSE IF (command == "townSquare")
