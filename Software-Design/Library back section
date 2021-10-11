@@ -33,9 +33,9 @@ IF(interactWith == "chair") THEN
 END ELSE IF
 
 IF(interactWith == "map") THEN
-      IF(!(hasItem("map"))) THEN 
+      IF(!(hasItem("real map"))) THEN 
          PRINTLN( NAME + "has picked up the map");
-	 addItemToInv("map");
+	 addItemToInv("real map");
    
    END ELSE IF
    
