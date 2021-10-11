@@ -3,8 +3,7 @@ Town Square Pseudocode
 
 IF(place== "townSquare") 
 BEGIN
-  
-  CREATE String action1, action2;
+ 
 
   PRINTLN "Narrator: You walk into the town square and see a farmer's stand and a flower stall."
   PRINTLN “Narrator: So, what are you doing now?:”
@@ -19,83 +18,39 @@ BEGIN
   BEGIN
     help();
   END
-  IF(command==(“look”)
-    CREATE String response
+  IF(command==(“look”))
 
     PRINTLN "Narrator: Oh yeah, you can see your friend's house from here."
 
-    PRINTLN “Narrator: But I already said, there’s a flower stall and a farmer’s stand here! Do you want to go visit one of them?:”
-    READ
-    IF(response==(“Y”)|| response==(“Yes”))
+    PRINTLN “Narrator: But I already said, there’s a flower stall and a farmer’s stand here!”
+    
+    IF(command==(use)
     BEGIN
-
+CREATE String action1
       PRINTLN "Narrator: Which one would you like to go to?:"
-      CREATE String[] standOptions = {"farmer's stand", "flower stall"};
-      action1 = checkInput(standOptions);
-      IF (action1== ("farmer's stand")) 
+      CREATE String[] squareOptions = {"farmer's stand", "flower stall, friend's door"};
+      action1 = checkInput(squareOptions);
+    
+    IF (action1== ("farmer's stand")) 
       BEGIN
     
-        PRINTLN "Narrator: You see the fruits and veggies the stand has but you're too broke to afford any of it"
+        PRINTLN "Narrator: You see the fruits and veggies the stand has but you're too broke to afford any of it."
         PRINTLN
-        PRINTLN "Narrator: Would you like to go to the flower stall?:"
-        CREATE String[] yesOrNo = {"Y", "N", "Yes", "No"};
-        action2=checkInput(yesOrNo);
     
-   
-        IF(action2==("Y") OR action2== ("Yes"))
-          BEGIN
-          PRINTLN "Narrator: You look at all the different flowers at the stand.”+ NAME +”should probably buy their mom some flowers if they ever find the treasure."
-        END
-        ELSE
-        PRINTLN "Narrator: Well what now? : "
-  
-   	  READ command;
-
-	  IF (command= (“visit”))
-          BEGIN
-	    place= visit(place);
-          END
-          IF (command= ("help”))
-          BEGIN
-            help();
-	  END
-
-          IF (command==("use"))
-
-            PRINTLN(
-
+    
           END
 
 
-    IF(action1== ("flower stall"))
-BEGIN
+
+    IF ELSE (action1== ("flower stall")) BEGIN
 
      PRINTLN "Narrator: You look at all the different flowers at the stand." +NAME +"should probably get their mom some flowers if they ever find the treasure."
-
-     PRINTLN "Narrator: Would you like to go to the farmer's stand?:"
-
-READ COMMAND action2;
-
-        IF(action2== ("Y") OR action2 ==("Yes"))
-BEGIN
-        
-        PRINTLN "Narrator: You see the fruits and veggies the stand has but you're too broke to afford any of it"
-        
         
     END
-ELSE 
- PRINTLN "Narrator: What will you do now?:"
-  
-    command = checkInput(inputs);
-	
-IF(command= “visit’)
-BEGIN
-place=	visit(place);
-END
-IF(command= “help”)
-BEGIN
-help();
-
-END
-END
-END
+    
+    IF ELSE (action1==("friend's house")) BEGIN
+    place=visit(place);
+    
+IF (command == "check inventory") THEN
+    checkInv();
+    END
