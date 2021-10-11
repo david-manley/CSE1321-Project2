@@ -3,9 +3,9 @@
 IF(place="library")
     BEGIN
     
-    PRINTLN "Narrator:"+NAME+" walks into the library."
+    PRINTLN  (NAME+ " walks into the library.");
     
-    PRINTLN "Narrator: So what are you doing while you're in here?: "
+    PRINTLN ("So what are you doing while you're in here?: ");
     command = checkInput(inputs);
     
     IF(command=="visit")
@@ -25,22 +25,22 @@ IF(place="library")
     
     IF(command=="look")
     BEGIN IF
-        PRINTLN "Narrator: "+NAME + " looks around the library and sees no comics in sight."
-        PRINTLN "Narrator: Well, of course there aren't comic books. This is a library not Barnes & Noble."
-        PRINTLN "Narrator: "+NAME +" does spot the section that has lots of old books when they finally stop moping about the comics."
-        PRINTLN "Narrator: You should be able to use the books through the books for information about the treasure."
+        PRINTLN (NAME + " looks around the library and sees no comics in sight.");
+        PRINTLN ("Well, of course there aren't comic books. This is a library not Barnes & Noble.");
+        PRINTLN (NAME +" does spot the section that has lots of old books when they finally stop moping about the comics.");
+        PRINTLN ("You should be able to use the books through the books for information about the treasure.");
     END IF
       
     IF(command == "use") THEN
       IF(!(hasItem("map")))
-        PRINTLN "Narrator: " + NAME + " starts skimming through the books because they can't be bothered to actually read and a piece of paper falls out of the last book they were holding."  
-        PRINTLN "Narrator: That was convenient. The paper is a very faded map that’s hard to read.”
-        PRINTLN “Narrator: It looks like it might be a map of the cave, but I wouldn’t use that as my guide. You’d probably get lost or die or something.”
-        PRINTLN "Narrator: That being said you do whatever floats your boat, I'm just the unfortunate narrator that has to deal with you..."
+        PRINTLN ( NAME + " starts skimming through the books because they can't be bothered to actually read and a piece of paper falls out of the last book they were holding.");  
+        PRINTLN ("That was convenient. The paper is a very faded map that’s hard to read.”);
+        PRINTLN ("It looks like it might be a map of the cave, but I wouldn’t use that as my guide. You’d probably get lost or die or something.”);
+        PRINTLN ("That being said you do whatever floats your boat, I'm just the unfortunate narrator that has to deal with you...");
         addItemToInv("map");
       END IF
       IF(hasItem("map"))
-        PRINTLN "Narrator: " + NAME + " starts skimming through the books yet again, because they can't be bothered to actually read."
+        PRINTLN (NAME + " starts skimming through the books yet again, because they can't be bothered to actually read.")
       END IF
     END IF
 
