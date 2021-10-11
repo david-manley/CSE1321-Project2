@@ -18,23 +18,23 @@ READ command
 
     IF (command==("help"))
     
-    BEGIN
+    BEGIN IF
 
     help();
 
-    END
+    END IF
     
     IF(command==("look"))
     
-    BEGIN
+    BEGIN IF
     
     PRINTLN "Narrator: "+NAME + " looks around the library and sees no comics in sight. "
 
     PRINTLN "Narrator: Well, of course there aren't comic books. This is a library not Barnes & Noble."
 
     PRINTLN "Narrator: "+NAME +" does spot the section that has lots of old books when they finally stop moping about the comics."
-
-    PRINTLN "Narrator: Are you going to look through the books for information about the treasure?:"
+    
+    PRINTLN "Narrator: You should be able to use the books through the books for information about the treasure."
     
     CREATE String action1
     READ action1
@@ -42,13 +42,56 @@ READ command
     IF(action1==("Y")|| action1==("Yes"))
 String[] options= {“Y”, “Yes”,”N”, “No”}
 
-        BEGIN
+        BEGIN IF
         
     PRINTLN "Narrator: You start skimming through the books because you can't be bothered to actually read and a piece of paper falls out of the last book you were holding."
    
  PRINTLN "Narrator: That was convenient. The paper is a very faded map that’s hard to read.”
 
-PRINTLN “Narrator: It looks like it might be a map of the cave, but I wouldn’t trust that as my guide. You’d probably get lost or die or something.”
+PRINTLN “Narrator: It looks like it might be a map of the cave, but I wouldn’t use that as my guide. You’d probably get lost or die or something.”
+
+PRINTLN "Narrator: That being said you do whatever floats your boat, I'm just the unfortunate narrator that has to deal with you...:"
+
+READ command
+
+    IF (command==("help"))
+    
+    BEGIN IF
+
+    help();
+
+    END IF
+    
+    IF(command==("look"))
+    
+    BEGIN IF
+ 
+    PRINTLN "Narrator: It's a library."
+    
+    END IF
+    
+    IF(command==("use"))
+   
+   CREATE String[] libraryObjects;
+  
+  IF(!(hasItem("fakeMap"))) THEN
+
+    IF(command == "use") THEN
+    
+   PRINTLN("What are you gonna use" + NAME +"?");
+   
+   CREATE String[] libraryObjects;
+   
+   IF(!(hasItem("libraryPass"))) THEN
+   
+   libraryObjects = {"faded map" }
+   command = checkInput(houseObjects);
+   END IF
+   ELSE IF(hasItem("faded map")) THEN
+   libraryObjects = {" "}
+   command = checkInput(houseObjects);
+   END ELSE IF
+
 
 PRINTLN “Narrator: Alright, what’s next?:”
 
@@ -72,6 +115,7 @@ PRINTLN “Narrator: Alright, what’s next?:”
     BEGIN
 
 PRINTLN “Narrator: I’m not describing the library again, you can’t be that dumb.”
+
 PRINTLN “Narrator: Pick something, I’m getting annoyed.:”
 
   IF(command==("visit"))
@@ -96,6 +140,7 @@ ELSE
 BEGIN
 
 PRINTLN “Narrator: Wow, you really are clueless.”
+
 PRINTLN “Narrator: Just figure out what you’re doing.”
 
 READ command
