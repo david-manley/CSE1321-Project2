@@ -22,10 +22,16 @@ END ELSE IF
 IF(command == "use") THEN
    PRINTLN("What is " + NAME + "going to use" );
    CREATE String[] librarybackObjects;
+    IF(!(hasItem("map"))) THEN
    librarybackObjects = {"chair", "map" , "books" }
     command = checkInput(librarybackObjects);
     END ELSE IF
     
+     ELSE IF(hasItem("map")) THEN
+     librarybackObjects = {"chair", "books"}
+     command = checkInput(librarybackObjects);
+     END ELSE IF
+ 
 IF(command == "chair") THEN
    PRINTLN(NAME + "sits down in the chair....lame");
    
