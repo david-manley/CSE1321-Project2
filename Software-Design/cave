@@ -43,7 +43,7 @@ IF (place == "cave") THEN
       PRINTLN("By sheer luck, " + NAME + " happens to stumble upon the location of the treasure, but as they take a step toward it, they are able to hear the click of a pressure plate".);
       PRINTLN("IT'S A TRAP!");
       
-      IF (hasItem("realMap")) THEN
+      IF (hasItem("real map")) THEN
         PRINTLN("Fortunately, " + NAME + " knew of this because of the old treasure map they found! They are 50 percent confident that they will be able to succeed in disarming the trap!");
         PRINT(NAME + " must now pick a number, 1 or 2: ");
         CREATE numberChoice;
@@ -56,7 +56,7 @@ IF (place == "cave") THEN
         END IF
       END IF
       
-      ELSE IF (hasItem("fakeMap")) THEN
+      ELSE IF (hasItem("map")) THEN
         PRINTLN("Unfortunately, " + NAME + " was unaware of this because the treasure map they found was a fake!");
         PRINT(NAME + " must now pick a number from 1- 50: ");
         CREATE numberChoice;
@@ -81,8 +81,22 @@ IF (place == "cave") THEN
           addItemToInv("treasure");
         END IF
       END ELSE
-       
-    END ELSE IF
-  END ELSE IF (cave passage)
+      
+      IF(hasItem("treasure");
+        IF(hasItem("real map")) THEN
+          PRINTLN("Thanks to " + NAME + "'s hard work and thorough searching, they have successfully managed to take home 
+            their treasure without dying in the process. This means they can finally get the education that they deserve!");
+        END IF
+        ELSE
+          PRINTLN("Thanks to sheer chance, " + NAME " somehow managed to return home with the treasure that they most definitely do not deserve. Story is over, now get out");
+        END ELSE
+      END IF
+      ELSE
+      PRINTLN("Unfortunately, due to either poor planning or bad luck, " + NAME + " has fallen victim to the trap, and will never be heard from again").
+      END ELSE
+      play = false;
+      
+    END ELSE IF (cave passage)
+  END ELSE IF
 END IF
     
