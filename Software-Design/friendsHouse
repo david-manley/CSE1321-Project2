@@ -33,7 +33,7 @@ IF(command=="look")
     END IF
     
     IF(interactWith== "door")
-    place= townSquare
+    place= "townSquare"
     END IF
   
   IF (command == "check inventory") THEN
