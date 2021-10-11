@@ -11,17 +11,17 @@ IF(place=("library"))
     IF(command==("visit"))
     BEGIN
       place=visit(place);
-    END
+    END IF
 
     IF (command==("help"))
     BEGIN IF
       help();
     END IF
     
-    IF (command=="check inventory")
+    IF (command==("check inventory"))
     BEGIN
       checkInv();
-    END
+    END IF
     
     IF(command==("look"))
     BEGIN IF
@@ -31,7 +31,7 @@ IF(place=("library"))
         PRINTLN "Narrator: You should be able to use the books through the books for information about the treasure."
     END IF
       
-    IF(command == "use") THEN
+    IF(command == ("use")) THEN
       IF(!(hasItem("map")))
         PRINTLN "Narrator: " + NAME + " starts skimming through the books because they can't be bothered to actually read and a piece of paper falls out of the last book they were holding."  
         PRINTLN "Narrator: That was convenient. The paper is a very faded map that’s hard to read.”
@@ -40,7 +40,7 @@ IF(place=("library"))
         addItemToInv("map");
       END IF
       IF(hasItem("map"))
-        PRINTLN "Narrator: " + NAME + " starts skimming through the books yet again, because they can't be bothered to actually read 
+        PRINTLN "Narrator: " + NAME + " starts skimming through the books yet again, because they can't be bothered to actually read."
       END IF
     END IF
 
