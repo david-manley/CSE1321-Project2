@@ -16,7 +16,7 @@ IF(command == "check inventory")THEN
   END IF
   
 IF(command == "look") THEN
-    PRINTLN(NAME + "looks around and spots more books (its like you're in library or something), a chair, and a map on a table.");
+    PRINTLN(NAME + "looks around and spots more books (it's like you're in library or something), a chair, and a map on a table.");
 END ELSE IF
 
 IF(command == "use") THEN
