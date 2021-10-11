@@ -1,6 +1,6 @@
 IF (place == "cave") THEN
-  PRINTLN(NAME + " has decided to visit the cave behind their house. They've travelled through the cave passageway, and arrived in their current location");
-  PRINTLN("Narrator: " + NAME + " recalls that many, many people have gone missing in this cave while looking for treasure.");
+  PRINTLN (NAME + " has decided to visit the cave behind their house. They've travelled through the cave passageway, and arrived in their current location");
+  PRINTLN ( NAME + " recalls that many, many people have gone missing in this cave while looking for treasure.");
   IF ((hasItem("realMap")) OR (hasItem("fakeMap"))) THEN
     PRINTLN("Luckily, " + NAME + " found a treasure map, and is able to traverse the cave safely (for the most part).");
   END IF
@@ -25,21 +25,21 @@ IF (place == "cave") THEN
   END ELSE IF
   
   ELSE IF(command == "use") THEN
-    PRINTLN("Narrator: I wonder, which object would " + NAME + " like to use?: ");
+    PRINTLN("I wonder, which object would " + NAME + " like to use?: ");
     CREATE interactWith;
     CREATE String[] caveObjects;
     caveObjects = {"cave exit", "cave path"}
     interactWith = checkInput(caveObjects);
     
     IF(interactWith == "cave exit") THEN
-      PRINTLN("Narrator: " + NAME + " has decided to make the smart choice, and leaves through the cave exit to go back to their home."
+      PRINTLN( NAME + " has decided to make the smart choice, and leaves through the cave exit to go back to their home."
       place = "home";
     END IF
     
     
     
     ELSE IF (interactWith == "cave path")THEN
-      PRINTLN("Narrator: Unfortunately, " + NAME + " has decided to continue with their foolish quest, and venturee deep into the mysterious cave.");
+      PRINTLN("Unfortunately, " + NAME + " has decided to continue with their foolish quest, and venturee deep into the mysterious cave.");
       PRINTLN("By sheer luck, " + NAME + " happens to stumble upon the location of the treasure, but as they take a step toward it, they are able to hear the click of a pressure plate".);
       PRINTLN("IT'S A TRAP!");
       
