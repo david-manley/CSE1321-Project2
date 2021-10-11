@@ -1,1 +1,0 @@
-Software Design Team - Place your design files in this folder
