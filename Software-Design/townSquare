@@ -49,21 +49,22 @@ BEGIN
         ELSE
         PRINTLN "Narrator: Well what now? : "
   
-   READ command;
+   	  READ command;
 
-IF (command= (“visit”))
-BEGIN
-place=	visit(place);
-END
-IF (command= ("help”))
-BEGIN
-help();
+	  IF (command= (“visit”))
+          BEGIN
+	    place= visit(place);
+          END
+          IF (command= ("help”))
+          BEGIN
+            help();
+	  END
 
-IF (command==("use"))
+          IF (command==("use"))
 
-PRINTLN(
+            PRINTLN(
 
-END
+          END
 
 
     IF(action1== ("flower stall"))
