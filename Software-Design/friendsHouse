@@ -1,5 +1,5 @@
 
-IF (use=("friend's door")) THEN   
+IF (place=="friend's house) THEN   
     
     PRINTLN ("You walk into your friend's house.");
     PRINTLN ("What are you even doing in here?: ");
@@ -14,10 +14,11 @@ help();
 IF(command=="look")
     PRINTLN ("You see a dresser in the corner because you have eyes. You probably could snoop around in it since you have hands too.");
     PRINTLN ("You also spot a plant like the one at your house, only this one is actually alive.");
+    
     END
  IF(command=="use")
     CREATE String[] friendsHouseObjects;
-    friendsHouseObjects ={"dresser", "plant"}
+    friendsHouseObjects ={"dresser", "plant", "door"}
     CREATE String ineractWith
     PRINTLN (What are you going to use: ?");
     READ interactWith
