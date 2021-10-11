@@ -71,7 +71,7 @@ END
     IF(action1== ("flower stall"))
 BEGIN
 
-     PRINTLN "Narrator: You look at all the different flowers at the stand." +NAME +"should probably their mom some flower's if they ever find the treasure."
+     PRINTLN "Narrator: You look at all the different flowers at the stand." +NAME +"should probably get their mom some flowers if they ever find the treasure."
 
      PRINTLN "Narrator: Would you like to go to the farmer's stand?:"
 
