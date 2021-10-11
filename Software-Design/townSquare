@@ -5,8 +5,8 @@ IF(place== "townSquare")
 BEGIN
  
 
-  PRINTLN "Narrator: You walk into the town square and see a farmer's stand and a flower stall."
-  PRINTLN “Narrator: So, what are you doing now?:”
+  PRINTLN ("You walk into the town square and see a farmer's stand and a flower stall.");
+  PRINTLN ("So, what are you doing now?: ”);
 
   command = checkInput(inputs);
 
@@ -19,23 +19,23 @@ BEGIN
     help();
   END
   IF(command==(“look”))
-    PRINTLN "Narrator: Oh yeah, you can see your friend's house from here."
-    PRINTLN “Narrator: But I already said, there’s a flower stall and a farmer’s stand here!”
+    PRINTLN ("Oh yeah, you can see your friend's house from here.");
+    PRINTLN ("But I already said, there’s a flower stall and a farmer’s stand here!”);
   END IF
   
   IF(command==(use)
   BEGIN
     CREATE String action1
-    PRINTLN "Narrator: Which one would you like to go to?:"
+    PRINTLN ("Which one would you like to go to?:");
     CREATE String[] squareOptions = {"farmer's stand", "flower stall", "friend's door"};
     action1 = checkInput(squareOptions);
     IF (action1== ("farmer's stand")) 
       BEGIN
-        PRINTLN "Narrator: You see the fruits and veggies the stand has but you're too broke to afford any of it."
+        PRINTLN ("You see the fruits and veggies the stand has but you're too broke to afford any of it.");
       END IF
       
     IF ELSE (action1== ("flower stall")) BEGIN
-      PRINTLN "Narrator: You look at all the different flowers at the stand." +NAME +"should probably get their mom some flowers if they ever find the treasure."
+      PRINTLN ("You look at all the different flowers at the stand." +NAME +"should probably get their mom some flowers if they ever find the treasure.");
     END IF
     
     IF ELSE (action1==("friend's house")) BEGIN
