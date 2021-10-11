@@ -1,5 +1,5 @@
 
-IF (place=="friend's house) THEN   
+IF (place=="friendsHouse") THEN   
     
     PRINTLN ("You walk into your friend's house.");
     PRINTLN ("What are you even doing in here?: ");
