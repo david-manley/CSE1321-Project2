@@ -1,8 +1,8 @@
-IF("Home")BEGIN
+IF(place = "Library back section" )BEGIN
   PRINTLN(NAME + " made it to the back of the Library");
   PRINTLN("What does" + NAME + "wanna do?!");
-  READ command;
-  command = checkInput(inputs, command);
+
+  command = checkInput(inputs);
 IF(command == "visit") THEN
     place = visit(place);
 END IF
@@ -12,29 +12,33 @@ IF(command == "help”) THEN
 END  IF
 
 IF(command == "check inventory")THEN
-    checkInventory();
+    checkInv();
   END IF
   
 IF(command == "look") THEN
     PRINTLN(NAME + "looks around and spots more books (its like you're in library or something), a chair, and a map on a table.");
-    PRINTLN("What is the plan?");
 END ELSE IF
 
 IF(command == "use") THEN
-   PRINTLN("What are you gonna use" + NAME +"?");
+   PRINTLN("What is " + NAME + "going to use" );
    CREATE String[] librarybackObjects;
    librarybackObjects = {"chair", "map" , "books" }
-    command = checkInput(houseObjects);
+    command = checkInput(librarybackObjects);
     END ELSE IF
     
-IF(interactWith == "chair") THEN
+IF(command == "chair") THEN
    PRINTLN(NAME + "sits down in the chair....lame");
    
 END ELSE IF
 
-IF(interactWith == "map") THEN
+IF(command == "books")THEN
+   PRINTLN(NAME + "opens a book, HOW EXCITING! (◔_◔)");
+   
+END ELSE IF
+
+IF(command == "map") THEN
       IF(!(hasItem("real map"))) THEN 
-         PRINTLN( NAME + "has picked up the map");
+        
 	 addItemToInv("real map");
    
    END ELSE IF
