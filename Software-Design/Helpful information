@@ -38,9 +38,21 @@ For those creating the locations.
 
 use checkInput to clairify ( if wrong checkInput will correct the player with the firm hand of restibution.)
 
-Order 
+Order of events 
 
-
+checkInput Method
+help Method
+Visit Method
+Invintory Method(s)
+Main Method {
+	 Home
+ 	townSquare
+ 	friendHouse
+	 libraryEntrance
+ 	libraryFront
+ 	libraryBack
+ 	cave
+}
  
 
 
