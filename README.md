@@ -1,3 +1,0 @@
-# Public Facing Website for Project 2
-In progress at...
-https://sweinstructor.github.io/CSE1321-Project2/
