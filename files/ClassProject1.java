@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class ClassProject1 {
 
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String name, command, place, object;
@@ -79,7 +78,7 @@ public class ClassProject1 {
                         System.out.println("You entered in and the door got stuck..");
                         if (caveMap = true) {
                             System.out.println("You know the place, so you will be able to find another exit");
-                            System.out.println("In the way you found a treasure with a lot of gold coins and saved it to pay your college”");
+                            System.out.println("In the way you found a treasure with a lot of gold coins and saved it to pay your collegeâ€�");
                             gameCompleted = true;
                         } else {
                             System.out.println("You got so scared and started kicking the door. Then you got lost in the cave and never found a way out");
