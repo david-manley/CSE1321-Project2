@@ -6,7 +6,7 @@ public class TextGame {
 	private String NAME = "";
 	private String PLACE = "home";
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Welcome to \"THE COLLEGE EXPERIENCE\" created by Hon CSE 1321 in the fall of 2021");
 		String[] inputs = {"use","look","visit","check inventory","help"};
@@ -21,7 +21,7 @@ public class TextGame {
 			System.out.println("We begin out story by taking a look at a specific college student, down "+
 					"on his luck, doing some brain storming on what to do about the money problem of college life");
 			System.out.print("What would this college students name be?: ");
-			String name = scan.next();
+			String name = sc.next();
 			System.out.println("Inspiration strikes!! as the college student named "+name+" decided to do! What did the colllege student do? ");
 			command = checkInput(inputs);
 			if(command == "visit")
