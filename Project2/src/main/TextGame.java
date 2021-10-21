@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class TextGame {
 	private static String NAME = "";
-	private String PLACE = "home";
+	private static String PLACE = "home";
 	
 	public static void Help()
 	{
@@ -33,9 +33,9 @@ public class TextGame {
 			command = sc.next();
 			for(int i = 0;i<inputs.length;i++)
 			{
-				String current;
-				current = inputs[i];
-				if(command == "current")
+				
+				String current = inputs[i];
+				if(command.equals(current))
 				{
 					isWrong = false;
 				}
@@ -47,7 +47,7 @@ public class TextGame {
 	public static String visit(String place)
 	{
 		String command ="";
-		//System.out.print("Where does "+NAME+"Want to go today I wonder? ");
+		System.out.print("Where does "+NAME+" want to go today I wonder? ");
 		String[] visitInput = {"home", "libraryEntrance","townSquare"};
 		command = checkInput(visitInput);
 		if(place.equals("libraryFrontSection") || place.equals("libraryBackSection") || place.equals("friendsHouse"))
@@ -57,12 +57,12 @@ public class TextGame {
 					"that they used to get in here in the first place.");
 			return place;
 		}
-		else if(command == "home")
+		else if(command.equals("home"))
 		{
 			System.out.println(NAME+" has decided to take a trip back to their home, probably to give up their useless and incredibly stupid adventure.");
 			return "home";
 		}
-		else if(command == "townSquare")
+		else if(command.equals("townSquare"))
 		{
 			System.out.println(NAME+" has decided to take a trip down to town Square, to see if they could find anything useful for their poor college student questing.");
 			return "townSquare";
@@ -93,20 +93,18 @@ public class TextGame {
 			NAME = sc.next();
 			System.out.println("Inspiration strikes!! as the college student named "+NAME+" decided to do! What did the colllege student do? ");
 			command = checkInput(inputs);
-			if(command == "visit")
+			if(command.equals("visit"))
 			{
-				System.out.print("Where does "+NAME+"Want to go today I wonder? ");
-				String place = sc.next();
-				visit(place);
+				visit(PLACE);
 			}
-			if(command == "help")
+			if(command.equals("help"))
 			{
 				Help();
 			}
 			
 			String gameplay="";
 			String[] options = {"Y","N"};
-			System.out.print("Do you want to control the life of a college student user again? Ener Y for yes and N for no.");
+			System.out.print("Do you want to control the life of a college student user again? Enter Y for yes and N for no.");
 			String gamePlay = checkInput(options);
 			if (gamePlay.equals("Y"))
 			{
