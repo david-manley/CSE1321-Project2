@@ -79,7 +79,7 @@ public class TextGame {
 					"on his luck, doing some brain storming on what to do about the money problem of college life");
 			System.out.print("What would this college students name be?: ");
 			NAME = sc.next();
-			System.out.println("Inspiration strikes!! as the college student named "+NAME+" decided to do! What did the colllege student do? ");
+			System.out.println("Inspiration strikes!! as the college student named "+NAME+" decided to do! What did the college student do? ");
 			command = checkInput(inputs);
 			if(command.equals("visit")) {
 				visit(PLACE);
