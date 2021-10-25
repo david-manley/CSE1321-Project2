@@ -42,8 +42,8 @@ public class Library {
 		else if(command=="use"){
 			if(!(hasItem("map"))){
 				System.out.println( NAME + " starts skimming through the books because they can't be bothered to actually read and a piece of paper falls out of the last book they were holding.");  
-        			System.out.println("That was convenient. The paper is a very faded map that’s hard to read.”);
-        			System.out.println("It looks like it might be a map of the cave, but I wouldn’t use that as my guide. You’d probably get lost or die or something.”);
+        			System.out.println("That was convenient. The paper is a very faded map that’s hard to read.");
+        			System.out.println("It looks like it might be a map of the cave, but I wouldn’t use that as my guide. You’d probably get lost or die or something.");
        				System.out.println("That being said you do whatever floats your boat, I'm just the unfortunate narrator that has to deal with you...");
 				addItemToInv("map");
 			}
