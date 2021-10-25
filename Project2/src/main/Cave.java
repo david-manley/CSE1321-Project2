@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Cave {
 	
-	public static boolean cave(String NAME, String PLACE, String command, String[] inputs) {
+	public static void cave(String NAME, String PLACE, String command, String[] inputs) {
 		Random rand = new Random();
 		Scanner sc = new Scanner(System.in);
 		int numberChoice;
@@ -14,7 +14,7 @@ public class Cave {
 		if (PLACE == "cave") {
 			System.out.print(NAME + " has decided to visit the cave behind their house. They've travelled through the cave passageway, and arrived in their current location.");
 			System.out.print(NAME + " recalls that many, many people have gone missing in this cave while looking for treasure.");
-			if ((Inventory.hasItem("realMap") || (Inventory.hasItem("fakemap")) {
+			if ((Inventory.hasItem("realMap") || (Inventory.hasItem("fakemap")))) {
 				System.out.print("Luckily, " + NAME + "+ found a treasure map, and is able to traverse the cave safely (for the most part).");
 			}
 			    
@@ -88,17 +88,16 @@ public class Cave {
 									System.out.print("Unfortunately, due to either poor planning or bad luck, " + NAME + " has fallen victim to the trap, and will never be heard from again. ");
 								}
 							
-								boolean play = false;
-								return play;
+								
 							}
 			
 						}
 						break;
 					default: 
-					System.out.print("This is not a valid action.");
-					continue;
+						System.out.print("This is not a valid action.");
+						continue;
 				}
-			
+				
 			}
 		
 		}			
