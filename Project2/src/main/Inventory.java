@@ -2,9 +2,9 @@ package main;
 import java.util.ArrayList;
 
 public class Inventory {
-	ArrayList<String> inventory = new ArrayList<String>();
+	public static ArrayList<String> inventory = new ArrayList<String>();
 	
-	void checkInv(){
+	public static void checkInv(String NAME){
 		System.out.print(NAME + " has ");
 		if (inventory.size() <= 1) {
 			if (inventory.size() == 1) {
@@ -23,7 +23,7 @@ public class Inventory {
 		}
 	}
 	
-	void addItemToInv(String item){
+	public static void addItemToInv(String item, String NAME){
 		if(hasItem(item));
 		else {
 			inventory.add(item);
@@ -31,7 +31,7 @@ public class Inventory {
 		}
 	}
 	
-	boolean hasItem(String item){
+	public static boolean hasItem(String item){
 		for (int i = 0; i < inventory.size(); i++) {
 			if (item.equals(inventory.get(i))){
 				return true;
@@ -40,10 +40,10 @@ public class Inventory {
 		return false;
 	}
 	
-	void RemoveInventory(String item){
+	public static void RemoveInventory(String item){
 		inventory.remove(item);
 	}
-	void ClearInventory() {
+	public static void ClearInventory() {
 		inventory.removeAll(inventory);
 	}
 }
