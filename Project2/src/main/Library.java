@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Library {
 
-	public static String libraryEntrance
+	public static String libraryEntrance ()
 	{
 		System.out.println(NAME + "is at the library entrance right now");
 		System.out.println(NAME + " was thinking of checking out the Library to see if any useful information will be there and if the library has any new comics!");
