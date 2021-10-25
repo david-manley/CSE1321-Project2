@@ -14,7 +14,7 @@ public class Library {
 		String input = input.nextLine();
 	}
 	
-	public static String libraryFront
+	public static String libraryFront ()
 	{
 		System.out.println(NAME + " walks into the library.");
 		System.out.println("So what are you doing while you're in here?: ");
