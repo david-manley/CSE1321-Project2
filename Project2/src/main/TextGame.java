@@ -91,7 +91,7 @@ public class TextGame {
 			String gameplay="";
 			String[] options = {"Y","N"};
 			System.out.print("Do you want to control the life of a college student user again? Enter Y for yes and N for no.");
-			String gamePlay = checkInput(options);
+			String gamePlay = sc.next();
 			if (gamePlay.equals("Y")) {
 				play = true;
 			}
