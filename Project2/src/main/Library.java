@@ -58,7 +58,7 @@ public class Library {
 				}
 
 			}
-		}while(!command.equals("use") || !command.equals("visit"))
+		}while(!(command.equals("use")) || !(command.equals("visit")))
 	}
 	public static void libraryBack(String NAME)
 	{
@@ -93,7 +93,7 @@ public class Library {
 					command = TextGame.checkInput(librarybackObjects);
 				}
 			}
-		}while(!command.equals("use") || !command.equals("visit"))
+		}while(!(command.equals("use")) || !(command.equals("visit")))
 		if(command.equals("chair")){
 			System.out.println(NAME + "sits down in the chair....lame");
 		}
