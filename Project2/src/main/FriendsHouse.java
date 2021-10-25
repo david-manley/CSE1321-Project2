@@ -6,13 +6,6 @@ public class FriendsHouse {
 			"dresser", "plant", "door"
 		};
 	
-	public FriendsHouse() {
-		
-		TextGame game = new TextGame();
-		
-		Houseinit();
-		HouseMain();
-	}
 	
 	static void Houseinit() {
 		String PLACE = "friendsHouse";
@@ -20,14 +13,14 @@ public class FriendsHouse {
 		System.out.println("What are you even doing in here?: ");
 	}
 	
-	static void HouseMain(){
+	static void HouseMain(String NAME, String[] inputs){
 		String interactWith;
 		
-		String command = checkInput(inputs);
+		String command = TextGame.checkInput(inputs);
 		switch (command) {
 			case "use":
 				System.out.println("What are you going to use: ?");
-				interactWith = checkInput(friendsHouseObjects);
+				interactWith = TextGame.checkInput(friendsHouseObjects);
 				
 				switch (interactWith) {
 					case "dresser":
@@ -42,10 +35,10 @@ public class FriendsHouse {
 								+ "lant alive longer than you did, but when you pick it you realiz"
 								+ "ed it's fake.");
 					case "door":
-						"You exit into the townSquare."
+						System.out.println("You exit into the townSquare.");
 						TownSquare();
 					default:
-						HouseMain();
+						HouseMain(NAME, inputs);
 				}
 				
 				break;
@@ -56,17 +49,17 @@ public class FriendsHouse {
 				break;
 				
 			case "visit":
-				TextGame.visit();
+				TextGame.visit(NAME);
 				break;
 				
 			case "check inventory":
-				checkInv();
+				Inventory.checkInv(NAME);
 				break;
 				
 			case "help":
 				TextGame.help();
 				break;				
 		}
-		HouseMain();
+		HouseMain(NAME, inputs);
 	}
 }
