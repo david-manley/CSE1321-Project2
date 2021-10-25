@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Library {
 
-	public static void libraryEntrance(String NAME)
-	{
+	public static void libraryEntrance(String NAME) {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println(NAME + "is at the library entrance right now");
@@ -18,8 +17,7 @@ public class Library {
 		}
 	}
 	
-	public static void libraryFront (String NAME)
-	{
+	public static void libraryFront (String NAME) {
 		String [] inputs = {"visit", "use", "look", "check inventory", "help"};
 		System.out.println(NAME + " walks into the library.");
 		System.out.println("So what are you doing while you're in here?: ");
@@ -58,10 +56,9 @@ public class Library {
 				}
 
 			}
-		}while(!(command.equals("use")) || !(command.equals("visit")))
+		}while(!(command.equals("use")) || !(command.equals("visit")));
 	}
-	public static void libraryBack(String NAME)
-	{
+	public static void libraryBack(String NAME) {
 	  	String [] inputs = {"visit", "use", "look", "check inventory", "help"};
 		System.out.println(NAME + " made it to the back of the Library");
 		System.out.println("What does" + NAME + "wanna do?!");
@@ -83,17 +80,16 @@ public class Library {
 			}
 			else if(command.equals("use")){
 				System.out.println("What is " + NAME + "going to use" );
-				String [] librarybackObjects;
 				if(!(Inventory.hasItem("map"))){
-					librarybackObjects = {"chair", "map", "books"};
+					String [] librarybackObjects = {"chair", "map", "books"};
 					command = TextGame.checkInput(librarybackObjects);
 				}
 				else if(Inventory.hasItem("map")){
-					librarybackObjects = {"chair", "books"};
+					String [] librarybackObjects = {"chair", "books"};
 					command = TextGame.checkInput(librarybackObjects);
 				}
 			}
-		}while(!(command.equals("use")) || !(command.equals("visit")))
+		}while(!(command.equals("use")) || !(command.equals("visit")));
 		if(command.equals("chair")){
 			System.out.println(NAME + "sits down in the chair....lame");
 		}
