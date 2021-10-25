@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Library {
 
-	public static String libraryEntrance(String NAME)
+	public static void libraryEntrance(String NAME)
 	{
 		Scanner sc = new Scanner(System.in);
 		
@@ -13,36 +13,38 @@ public class Library {
 		System.out.println("Narrator: " + NAME + " needs a Library Pass to enter the back section." + NAME +" remembers what happened last time someone forgot it and they lost their pants!!");
 		System.out.println( "What will " + NAME + " do next? Right now it seems like they're just going to stand there like a statue, apparently");
 		String input = sc.nextLine();
-		return input;
+		if(input.equals("libraryEntrance")) {
+			libraryFront(NAME);
+		}
 	}
 	
-	public static void libraryFront (String NAME, String command)
+	public static void libraryFront (String NAME)
 	{
 		String [] inputs = {"visit", "use", "look", "check inventory", "help"};
 		System.out.println(NAME + " walks into the library.");
 		System.out.println("So what are you doing while you're in here?: ");
-		command = TextGame.checkInput(inputs);
+		String command = TextGame.checkInput(inputs);
 		String place = "";
-		if(command=="visit"){
-			place=TextGame.visit(place);
+		if(command.equals("visit")){
+			TextGame.visit(place);
 		}
 		
-		else if(command=="help"){
+		else if(command.equals("help")){
 			TextGame.help();	
 		}
 		
-		else if(command=="check inventory"){
+		else if(command.equals("check inventory")){
 			Inventory.checkInv(NAME);	
 		}
 		
-		else if(command=="look"){
+		else if(command.equals("look")){
 			System.out.println(NAME + " looks around the library and sees no comics in sight.");
         		System.out.println("Well, of course there aren't comic books. This is a library not Barnes & Noble.");
         		System.out.println(NAME +" does spot the section that has lots of old books when they finally stop moping about the comics.");
         		System.out.println("You should be able to use the books through the books for information about the treasure.");
 		}
 		
-		else if(command=="use"){
+		else if(command.equals("use")){
 			if(!(Inventory.hasItem("map"))){
 				System.out.println( NAME + " starts skimming through the books because they can't be bothered to actually read and a piece of paper falls out of the last book they were holding.");  
         			System.out.println("That was convenient. The paper is a very faded map that’s hard to read.");
@@ -55,6 +57,7 @@ public class Library {
 			}
 				
 		}
+		
 	}
 		
 }
